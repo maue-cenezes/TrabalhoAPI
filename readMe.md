@@ -1,7 +1,7 @@
 <h1 align='center'>Trabalho APIs - Spotify API</h1>
 <h4 align='center'>Programação em Scripts - ADSMA4 - Fatec São Caetano do Sul</h4>
 
-Esse trabalho foi proposto pelo professor Semirames pela disciplina _Programação em Scripts_, no 4° semestre do curso de _Análise e Desenvolvimento de Sistemas_. O projeto que escolhemos foi criar uma aplicação web simples que conecta-se com a API `Spotify Web API` para fazer buscas de músicas, artistas e álbuns.
+Esse trabalho foi proposto pelo professor Semirames pela disciplina _Programação em Scripts_, no 4° semestre do curso de _Análise e Desenvolvimento de Sistemas_. O projeto que escolhemos fazer foi de uma aplicação web simples que conecta-se com a API `Spotify Web API` para fazer buscas de músicas, artistas e álbuns.
 
 ------------  
 
