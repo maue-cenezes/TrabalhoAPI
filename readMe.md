@@ -45,11 +45,15 @@ Em um cenário real, seria de suma importância que as informações de `clientI
 
 # Arquivos
 =========================
+
 O projeto contém 4 arquivos:
 
 ├── index.html --> Arquivo principal do site;
+
 ├── style.css --> Estilos da página;
+
 ├── script.js  --> Lógica de busca e interação com a API;
+
 └── .readMe.md -->  Este arquivo.
 
 
@@ -57,6 +61,7 @@ O projeto contém 4 arquivos:
 
 # Como usar
 =========================  
+
 Para usar o projeto, basta baixar todos os arquivos e executar o `index.html` no seu navegador.
 Alternativamente, nós hospedamos o trabalho no domínio do nosso grupo, o qual criamos para essa disciplina. Você pode acessar por aqui: http://projetoprogscript.great-site.net/TrabalhoAPIs/cauejanis/.
 
@@ -64,21 +69,32 @@ Alternativamente, nós hospedamos o trabalho no domínio do nosso grupo, o qual 
 
 # Funções
 =========================  
-O código dentro do arquivo `app.js` contém 4 funções, sendo elas:
+
+O código dentro do arquivo `app.js` contém 3 funções principais, sendo elas:
 - `async function getAccessToken()`
 Usada para fazer a requisição do token de acesso, com as credenciais fornecidas;
 - `function exibeResultados(item, tipo)`
 Usada para percorrer toda a lista de resultados, organizar o conteúdo e exibir no HTML;
 - `async function searchSong()`
 Usada para fazer a requisição de busca em si, passando os parâmetros fornecidos pelo usuário no HTML;
+
+
+Outras 3 funções foram criadas para melhorar a usabilidade:
 - `function limpar()`
 Usada para limpar a tela, removendo todos os resultados atuais.
+- `function animation()`
+Usada para fazer uma animação simples ao tentar fazer uma busca sem parâmetros, para indicar ao usuário que algo precisa ser digitado.
+- `function validarFiltro()`
+Usada para organizar melhor o código ao fazer as validações de filtros de busca.
+
 
 Para mais detalhes do funcionamento de cada função, verifique o arquivo `app.js` e veja os comentários! 
 
 --------------  
 
 # Tecnologias usadas  
+=========================
+
 Para o desenvolvimento do projeto, foram usadas as seguintes tecnologias:
 * HTML5: Estrutura básica da página.
 * CSS3: Estilos para o layout da página.
@@ -87,7 +103,6 @@ Para o desenvolvimento do projeto, foram usadas as seguintes tecnologias:
 * Spotify Web API: Para buscar dados das músicas.
 
 --------------
-
 
 # Autores
 - Cauê Nunes de Menezes;
