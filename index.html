@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> <!--Estilização usada principalmente nos Ícones-->
+    <title>Spotify API</title>
+</head>
+<body>
+    <h1>Spotify</h1>
+    <!--Seção da caixa de busca e botões associados-->
+    <div id="busca">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Pesquise uma música no Spotify ">
+        <button onclick="searchSong()">Buscar</button> <!--Chamada da função principal do app.js-->
+        <button type="submit" id="filterButton"><i class="fas fa-filter"></i>Filtros</button>
+        <button onclick="limpar()" id="btnlimpar">Limpar</button>
+    </div>
+    
+    <!--Div para exibir mensagem de erro de conexão, caso necessário. É "hidden" por padrão no CSS-->
+    <div id="avisoOff">
+        <p>Ops, parece que tivemos um erro.</p>
+        <p>Verifique sua conexão com a internet.</p>
+    </div>
+    
+    <!--Parte dos filtros em si-->
+    <div id="filtros">
+        <div class="filtroTipo">
+            <p>Tipo:</p>
+            <label>
+                <input id="album" type="radio" name="tipo" value="album">
+                Álbum
+            </label>
+            <label>
+                <input id="artista" type="radio" name="tipo" value="artist">
+                Artista
+            </label>
+            <label>
+                <input id="musica" type="radio" name="tipo" value="track">
+                Música
+            </label>
+        </div>
+        <div class="filtroText">
+            <div class="filtroPais">
+                <p>País:</p><input id="pais" type="text" maxlength="2">
+            </div>
+            <div class="filtroLimite">
+                <p>Limite:</p><input id="limite" type="number" max="50" name="Limite">
+            </div>
+            <div class="filtroOffset">
+                <p>Offset:</p><input id="offset" type="number" max="1000" name="OffSet">
+            </div>
+        </div>
+    </div>
+
+    <!-- Div inicialmente vazia, com uma lista, para receber os valores da busca depois da busca na API-->
+     <ol>     
+         <div id="results"></div>
+         
+    </ol>
+    <script src="app.js"></script> <!--Conexão com o arquivo Javascript-->
+</body>
+</html>

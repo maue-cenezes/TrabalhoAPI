@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #1db954; 
+    text-align: center;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    margin: 20px auto;
+    border: 2px solid #1db954;
+    border-radius: 25px;
+    font-size: 16px;
+    display: inline-block;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    outline: none; /*Não troca a cor da borda ao focar*/
+}
+
+.animation {
+    border: 2px solid #b91d1d !important; /*Prioriza a alteração da cor de borda ao tentar buscar sem digitar nada*/
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1db954; 
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #17a34a; /*Escurece ao passar o mouse em cima*/
+}
+
+/*Estilização do ícone*/
+i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/*Alinha input/botão de busca*/
+#busca {
+    text-align: center;
+}
+
+/*Esconde aviso offline*/
+#avisoOff {
+    display: none;
+    text-align: center;
+}
+
+ol {
+    list-style-type: none; /*Tira numeração*/
+    padding: 0;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+/*Estilização dos resultados*/
+.resultsItem {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nomeArtista {
+    font-size: 0.8em;
+    color: #555;
+}
+
+#filtros {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /*Largura da div*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /*Centraliza a div*/
+    display: none;
+    font-size: 14px;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+}
+
+#filtros.show {
+    opacity: 1;
+    display: flex; /*Mostra os filtros*/
+}
+
+#filtros.hide {
+    opacity: 0; /*Esconde*/
+    height: 0; /*Altura inicial = 0*/
+}
+
+.filtroTipo, .filtroPais, .filtroLimite, .filtroOffset {
+    margin-bottom: 15px; /*Espaçamento entre filtros*/
+}
+
+.filtroTipo {
+    display: flex;
+    flex-direction: column; /*Opções uma abaixo da outra*/
+    margin-right: 20px;
+}
+
+#filtros p {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+#filtros input[type="radio"], 
+#filtros input[type="number"], 
+#filtros input[type="text"] {
+    margin-inline: 10px; /*Espaçamento input/label*/
+}
+
+#filtros input[type="text"], 
+#filtros input[type="number"] {
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    /*Quadricula os inputs*/
+    width: 20px;
+    height: 5px;
+    text-transform: uppercase; /*Deixa o texto em maiusculo ao digitar*/
+}
+
+#filtros input[type="radio"] {
+    margin-left: 5px;
+}
+
+/*Remove os spinners do input number*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+}
+
+.filtroText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.filtroText div {
+    display: flex; /*Alinhar label/input */
+    align-items: center;
+    margin-bottom: 10px; /*Espaçamento entre filtros*/
+}
+
