@@ -19,6 +19,7 @@ Esse trabalho foi proposto pelo professor Semirames pela disciplina _Programaç�
 
 # Requisitos
 =========================
+
 Para utilizar o projeto não é necessário fazer nenhuma configuração, apenas baixar os arquivos e executar no navegador!
 Entretanto, é importante pontuar que para usar a `Spotify Web API` para fazer buscas é necessário obter e utilizar um `Token de Acesso`. Para obter esse token, alguns processos foram necessários:
 * Criar uma conta no Spotify;
